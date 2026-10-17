@@ -524,7 +524,8 @@ public final class LauncherActivity extends Activity {
 
     // ---- Storage ---------------------------------------------------------------------------------------
 
-    private static File gameRoot() { return new File(Environment.getExternalStorageDirectory(), "nfsmw"); }
+    private static File gameRoot() { return new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "nfsmw-androidevolved"); }
+
 
     private boolean allowed() {
         return Build.VERSION.SDK_INT >= 30 ? Environment.isExternalStorageManager()
